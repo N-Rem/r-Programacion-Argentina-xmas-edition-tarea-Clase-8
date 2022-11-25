@@ -1,7 +1,7 @@
 function crearStringLargos(longitudString) {
     let string = "";
     for (let i = 0; i < longitudString; i++) {
-        string += 1;
+        string += "i";
     }
     return string;
 }
@@ -11,6 +11,7 @@ function probarValidarNombre() {
     console.assert(validarNombre(crearStringLargos(50)) === "Este campo debe tener menos de 50 caracteres", "validarNombre no valido que el Nombre no sea igual a 50 caracteres");
     console.assert(validarNombre(crearStringLargos(51))=== "Este campo debe tener menos de 50 caracteres", "validarNombre no valido que el Nombre no sea mayor a 50 caracteres");
     console.assert(validarNombre("Nicolas") === "", "ValidarNombre Fallo con un nombre valido");
+    console.assert(validarNombre("d32k1k34j6k") === "Este campo solo debe contener letras", "ValidarNombre no valido un valor que contenia caracteres no permitidos");
 }
 
 
@@ -27,12 +28,11 @@ function probarValidarComportamiento() {
 function probarValidarDescripcionRegalo() {
     console.assert(validarDescripcionRegalo("") === "debes ingresar algo en la descripcion del regalo.", "validarDescripcionRegalo no valido que no sea un String vacío");
     console.assert(validarDescripcionRegalo(crearStringLargos(101)) === "la carta no debe de tener mas de 100 caracteres", "validarDescripcionRegalo no valido que no sea un String mayor a 100 caracteres");
-    console.assert(validarDescripcionRegalo(crearStringLargos(80)) === "", "validarDescripcionRegalo fallo con un string valido");
+    console.assert(validarDescripcionRegalo(crearStringLargos(70)) === "", "validarDescripcionRegalo fallo con un string valido");
+    console.assert(validarDescripcionRegalo(",.,-.,-.,-.,,-.,,.-") === "la carta solo debe contener letras y numeros." );
 }
 
-function probarValidaciones (){
-    probarValidarNombre();
-    probarValidarCiudad();
-    probarValidarComportamiento();
-    probarValidarDescripcionRegalo();
-}
+probarValidarNombre();
+probarValidarCiudad();
+probarValidarComportamiento();
+probarValidarDescripcionRegalo();
