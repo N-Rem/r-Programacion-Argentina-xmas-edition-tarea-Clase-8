@@ -1,11 +1,8 @@
 const $form = document.querySelector("#carta-a-santa");
-const boton = $form.submit;
-// boton.onclick = validarForm;
 $form.onsubmit = validarForm;
 
 function validarForm(event) {
-    event.preventDefault();//preventDefault
-
+    event.preventDefault();
     const $form = document.querySelector("#carta-a-santa");
 
     const nombre = $form.nombre.value;

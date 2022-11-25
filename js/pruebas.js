@@ -32,7 +32,3 @@ function probarValidarDescripcionRegalo() {
     console.assert(validarDescripcionRegalo(",.,-.,-.,-.,,-.,,.-") === "la carta solo debe contener letras y numeros." );
 }
 
-probarValidarNombre();
-probarValidarCiudad();
-probarValidarComportamiento();
-probarValidarDescripcionRegalo();
