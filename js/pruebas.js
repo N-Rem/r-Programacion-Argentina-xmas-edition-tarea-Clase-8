@@ -7,11 +7,11 @@ function crearStringLargos(longitudString) {
 }
 
 function probarValidarNombre() {
-    console.assert(validarNombre("") === "Este campo debe tener al menos 1 caracter", "validarNombre no valido que el Nombre no sea un string vacío");
-    console.assert(validarNombre(crearStringLargos(50)) === "Este campo debe tener menos de 50 caracteres", "validarNombre no valido que el Nombre no sea igual a 50 caracteres");
-    console.assert(validarNombre(crearStringLargos(51))=== "Este campo debe tener menos de 50 caracteres", "validarNombre no valido que el Nombre no sea mayor a 50 caracteres");
+    console.assert(validarNombre("") === "El nombre debe tener al menos 1 caracter", "validarNombre no valido que el Nombre no sea un string vacío");
+    console.assert(validarNombre(crearStringLargos(50)) === "El nombre debe tener menos de 50 caracteres", "validarNombre no valido que el Nombre no sea igual a 50 caracteres");
+    console.assert(validarNombre(crearStringLargos(51))=== "El nombre debe tener menos de 50 caracteres", "validarNombre no valido que el Nombre no sea mayor a 50 caracteres");
     console.assert(validarNombre("Nicolas") === "", "ValidarNombre Fallo con un nombre valido");
-    console.assert(validarNombre("d32k1k34j6k") === "Este campo solo debe contener letras", "ValidarNombre no valido un valor que contenia caracteres no permitidos");
+    console.assert(validarNombre("d32k1k34j6k") === "El nombre debe contener letras", "ValidarNombre no valido un valor que contenia caracteres no permitidos");
 }
 
 
@@ -32,3 +32,7 @@ function probarValidarDescripcionRegalo() {
     console.assert(validarDescripcionRegalo(",.,-.,-.,-.,,-.,,.-") === "la carta solo debe contener letras y numeros." );
 }
 
+probarValidarDescripcionRegalo();
+probarValidarComportamiento()
+probarValidarCiudad()
+probarValidarNombre()
