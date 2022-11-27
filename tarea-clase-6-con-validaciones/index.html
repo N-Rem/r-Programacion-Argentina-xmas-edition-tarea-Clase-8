@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet-case-seis.css" />
+    <title>Clase seis</title>
+</head>
+
+<body>
+    <h1 class="titulo">Edad y Salario del Grupo familiar</h1>
+    <form id="formulario" onsubmit="return false">
+        <label for="cantidad-de-familia">¿Cuanta Personas conforman tu grupo familiar?</label>
+        <input type="number" id="cantidad-de-familia" name="cantidad-de-familia"
+            placeholder="cantidad de familiares"><br />
+        <button id="agregar-familiares" class="boton">Agregar Familiares</button>
+        <button id="agregar-salarios-familiares" class="boton">Agregar su Salario</button>
+
+        <br />
+        <div id="formulario">
+            <br /><button id="calcular" class="boton oculto">Calcular</button>
+        </div>
+    </form>
+    <ul id="errores"></ul>
+    <div id="resultado-final" class="oculto">
+        <p>El mayor es: <strong id="edad-mayor"></strong></p>
+        <p>El menor es: <strong id="edad-menor"></strong></p>
+        <p>El promedio de edad es: <strong id="edad-promedio"></strong></p>
+        <p>El mayor salario anual es: <strong id="salario-mayor"></strong></p>
+        <p>El menor salario anual es: <strong id="salario-menor"></strong></p>
+        <p>El salario anual promedio es: <strong id=salario-anual-promedio></strong></p>
+        <p>El salario mensual pormedio es: <strong id="salario-mensual-promedio"></strong></p>
+    </div>
+
+    <button id="empezar-de-nuevo" class="boton">Empezar De Nuevo</button>
+
+    <script src="edadFamiila.js"></script>
+    <script src="saldoFamiliar.js"></script>
+    <script src="botonesParaPagina.js"></script>
+    <script src="validaciones.js"></script>
+    <script src="pruebas.js"></script>
+
+</body>
+
+</html>
