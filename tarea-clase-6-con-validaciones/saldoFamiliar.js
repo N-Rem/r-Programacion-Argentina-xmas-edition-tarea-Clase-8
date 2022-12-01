@@ -42,35 +42,36 @@ function comprobarInputRadio(numeroDelFamiliar) {
     }
 }
 
+
 function mayorSalario() {
-    const $salariosDeFamiliares = document.querySelectorAll(".salario");
-    let numeroMayor = Number($salariosDeFamiliares[0].value);
-    for (let i = 0; i < $salariosDeFamiliares.length; i++) {
-        if (numeroMayor < Number($salariosDeFamiliares[i].value)) {
-            numeroMayor = Number($salariosDeFamiliares[i].value);
+    let salarios = crearArrayDeSalarios(); 
+    let numeroMayor = 0;
+    for (let i = 0; i < salarios.length; i++) {
+        if (numeroMayor < Number (salarios[i])) {
+            numeroMayor = Number (salarios[i]);
         }
     }
     return numeroMayor;
 }
-
 function menorSalario() {
-    const $salariosDeFamiliares = document.querySelectorAll(".salario");
-    let numeroMenor = Number($salariosDeFamiliares[0].value);
-    for (let i = 0; i < $salariosDeFamiliares.length; i++) {
-        if (numeroMenor > Number($salariosDeFamiliares[i].value)) {
-            numeroMenor = Number($salariosDeFamiliares[i].value);
+    let salarios = crearArrayDeSalarios();
+    let numeroMenor = Number (salarios[0]);
+    
+    for (let i = 0; i < salarios.length; i++) {
+        if (numeroMenor > Number (salarios[i])) {
+            numeroMenor = Number (salarios[i]);
         }
     }
     return numeroMenor;
 }
 function promedioSalarioAnual() {
-    const $salariosDeFamiliares = document.querySelectorAll(".salario");
+    let salarios = crearArrayDeSalarios();
     let sumaParaPromedio = 0;
     let promedio;
-    for (let i = 0; i < $salariosDeFamiliares.length; i++) {
-        sumaParaPromedio += Number($salariosDeFamiliares[i].value);
+    for (let i = 0; i < salarios.length; i++) {
+        sumaParaPromedio += Number(salarios[i]);
     }
-    promedio = sumaParaPromedio / $salariosDeFamiliares.length;
+    promedio = sumaParaPromedio / salarios.length;
     return promedio;
 }
 function promedioSalarioMensual() {

@@ -21,6 +21,7 @@ input {
     background-color: rgb(254, 232, 229);
     border: none;
     border-radius: 15px;
+    margin: 1px; 
 }
 
 input:focus {
