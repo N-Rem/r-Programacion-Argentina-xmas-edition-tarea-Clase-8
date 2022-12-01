@@ -7,7 +7,7 @@ function validarFormulario() {
 
     const errorNombre = validarNombre(nombres);
     const errorEdad = validarEdad(edades);
-    
+
     const errores = {
         nombre: errorNombre,
         edad: errorEdad,
@@ -19,43 +19,43 @@ function validarFormulario() {
     }
     marcarErrores(errores);
 }
-function validarLaCantidadFamiliares () {
+function validarLaCantidadFamiliares() {
     borrarErrores();
     const cantidadFamiliares = $formulario["cantidad-de-familia"];
     const errorCantidadFamiliares = validarCantidadFamiliares(cantidadFamiliares.value);
-    const error = {"cantidad-de-familia": errorCantidadFamiliares};
+    const error = { "cantidad-de-familia": errorCantidadFamiliares };
     marcarErrores(error);
 }
 
-function retornarErrores (){
+function retornarErrores() {
     let contadorErrores = 0
     const exito = 0;
     const cantidadDeFamiliares = $formulario["cantidad-de-familia"];
     const errorCantidadFamiliares = validarCantidadFamiliares(cantidadDeFamiliares.value);
     const errores = {
-        "cantidad-de-familia" : errorCantidadFamiliares 
+        "cantidad-de-familia": errorCantidadFamiliares
     }
-    
-    if ($formulario.nombre !== undefined || $formulario.edad !== undefined){
-        const nombres = crearArrayDeNombres(); 
+
+    if ($formulario.nombre !== undefined || $formulario.edad !== undefined) {
+        const nombres = crearArrayDeNombres();
         const edades = crearArrayDeEdades();
         const errorNombre = validarNombre(nombres);
         const errorEdad = validarEdad(edades);
         errores.nombre = errorNombre;
         errores.edad = errorEdad;
     }
-    if ($formulario.salario !== undefined){
+    if ($formulario.salario !== undefined) {
         const salario = crearArrayDeSalarios();
         const errorSalario = validarSalarioAnual(salario);
         errores.salario = errorSalario;
     }
     const values = Object.values(errores);
-    for(let i = 0; i < values.length; i++){
-        if (values[i] !== ""){
+    for (let i = 0; i < values.length; i++) {
+        if (values[i] !== "") {
             contadorErrores++
         }
     }
-    if (contadorErrores > exito){
+    if (contadorErrores > exito) {
         return true;
     }
     else {
@@ -85,7 +85,7 @@ function marcarErrores(errores) {
             if ($formulario[key].length > unElemento) {
                 $formulario[key].forEach((elemento) => { elemento.classList = ""; })
             }
-            else{
+            else {
                 $formulario[key].classList = "";
             }
         }
@@ -95,16 +95,14 @@ function marcarErrores(errores) {
 function borrarErrores() {
     const listaDeErrores = document.querySelectorAll("[name = 'error']");
     const inputs = document.querySelectorAll("input");
-    for (let i= 0; i < inputs.length; i++){
+    for (let i = 0; i < inputs.length; i++) {
         inputs[i].classList = "";
     }
-    
+
     listaDeErrores.forEach(elemento => {
         elemento.remove();
     })
-    
 }
-
 
 function validarCantidadFamiliares(cantidadDeFamiliares) {
     const espacioVacio = "";
@@ -151,7 +149,7 @@ function validarEdad(edad) {
     let numeroNoEntero = 0;
     const noHayErrores = 0;
 
-    if (edad[0]=== undefined) {
+    if (edad[0] === undefined) {
         edad.push(vacio)
     }
 
@@ -193,16 +191,15 @@ function validarSalarioAnual(salario) {
     return "";
 }
 
-
 function crearArrayDeValores(valores) {
     let arrayValores = [];
-    
-    if (valores.length > 0){ 
+
+    if (valores.length > 0) {
         for (let i = 0; i < valores.length; i++) {
             arrayValores.push(valores[i].value);
         }
     }
-    else{
+    else {
         if (valores.value === "") {
             arrayValores.push[""];
         }

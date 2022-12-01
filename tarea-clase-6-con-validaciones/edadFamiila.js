@@ -13,14 +13,14 @@ function agregarDiv(numeroDeFamiliar) {
     $contenedorFamiliar.classList.add('div-familiar');
     $formulario.appendChild($contenedorFamiliar);
 }
-function agregarSubtitulo (numeroDeFamiliar){
+function agregarSubtitulo(numeroDeFamiliar) {
     const $contenedorFamiliar = document.querySelector(`.familiar-${numeroDeFamiliar}`);
     const $elementoTitulo = document.createElement("h3");
     const $textoElementoTitulo = document.createTextNode(`Familiar numero ${numeroDeFamiliar}`);
     $elementoTitulo.classList = "subtitulo-familiar";
     $elementoTitulo.appendChild($textoElementoTitulo);
     $contenedorFamiliar.appendChild($elementoTitulo);
-    
+
 }
 function agregarInputNombre(numeroDeFamiliar) {
     const $label = document.createElement("label");
@@ -105,7 +105,6 @@ function comprobarInputsEdadVacios(numeroDeFamiliar) {
         if (salarios[i].value === "") {
             inputsVacios++
         }
-
     }
     if (inputsVacios === 0) {
         return true;
@@ -114,7 +113,6 @@ function comprobarInputsEdadVacios(numeroDeFamiliar) {
         return false;
     }
 }
-
 
 function mayorEdad(numerosDeFamiliares) {
     let numeroMayor = 0;
