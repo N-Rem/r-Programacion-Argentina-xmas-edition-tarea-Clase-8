@@ -1,0 +1,78 @@
+* {
+    color: rgb(129, 74, 83);
+    text-align: center;
+}
+
+.titulo {
+    text-transform: uppercase;
+    text-decoration: overline underline;
+    letter-spacing: 3px;
+    word-spacing: 3px;
+}
+
+.subtitulo-familiar {
+    color: rgb(255, 113, 137);
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+input {
+    color: rgb(189, 77, 36);
+    background-color: rgb(254, 232, 229);
+    border: none;
+    border-radius: 15px;
+    margin: 1px; 
+}
+
+input:focus {
+    background-color: rgb(255, 231, 227);
+    outline: none;
+}
+
+label {
+    text-transform: uppercase;
+    word-spacing: 3px;
+}
+
+.boton {
+    background-color: pink;
+    color: rgb(30, 9, 9);
+    border: none;
+    border-radius: 15px;
+}
+
+.boton:hover {
+    background-color: rgb(252, 119, 141);
+}
+
+p {
+    text-align: left;
+}
+
+strong {
+    color: rgb(92, 49, 56);
+    font-size: 17px;
+}
+
+.div {
+    width: 72%;
+    margin: 5px auto;
+    text-align: left;
+}
+
+#resultado-final {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: rgb(255, 234, 232);
+    margin: 5px auto;
+    width: 25%;
+}
+
+.oculto{
+    display: none;
+}
+
+.error{
+    border: 3px solid red;
+}
+
